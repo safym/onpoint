@@ -20,19 +20,22 @@ Builds the app for production:
 
 ### `npm run eject`
 
+Prettier
+
+### `npx prettier --write .`
+
 ## Технологии
 
 [+] Git
 
-[+] React 
+[+] React
 
-[-] PostCSS 
+[-] PostCSS
 
-[-] Webpack 
+[-] Webpack
 
 [-] Prettier
 
 [-] BEM
 
 [-] babel
-
