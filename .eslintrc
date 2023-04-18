@@ -6,10 +6,22 @@
     "quotes": ["warn", "single"],
     "jsx-quotes": ["warn", "prefer-double"],
     "indent": ["warn", 2],
-    "max-len": ["warn", {"code": 120}],
-    "import/order": ["warn", {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+    "max-len": ["warn", { "code": 120 }],
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
         "newlines-between": "always-and-inside-groups"
-    }]
+      }
+    ]
   }
 }
