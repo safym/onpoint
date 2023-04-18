@@ -18,7 +18,8 @@
     "eject": "react-scripts eject",
     "prettier": "npx prettier --write .",
     "lint": "eslint -c .eslintrc --ext .js,.jsx .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "babel-build": "npx babel src --out-dir lib"
   },
   "browserslist": {
     "production": [
@@ -33,6 +34,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
     "prettier": "2.8.7"
   }
 }

@@ -32,6 +32,10 @@ lint:fix
 
 ### `npm run lint:fix`
 
+run babel buid
+
+### `npm run babel-build`
+
 ## Технологии
 
 [+] Git
