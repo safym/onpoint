@@ -24,6 +24,14 @@ Prettier
 
 ### `npx prettier --write .`
 
+lint
+
+### `npm run lint`
+
+lint:fix
+
+### `npm run lint:fix`
+
 ## Технологии
 
 [+] Git
