@@ -44,12 +44,12 @@ run babel buid
 
 [-] PostCSS
 
+[-] BEM
+
 [-] Webpack
 
 [+] ESlint
 
 [+] Prettier
 
-[-] BEM
-
-[-] babel
+[+] babel
