@@ -22,7 +22,7 @@ Builds the app for production:
 
 Prettier
 
-### `npx prettier --write .`
+### `npm run prettier`
 
 lint
 
@@ -42,7 +42,9 @@ lint:fix
 
 [-] Webpack
 
-[-] Prettier
+[+] ESlint
+
+[+] Prettier
 
 [-] BEM
 
