@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "normalize.css": "^8.0.1",
     "postcss": "^8.4.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -26,18 +27,7 @@
     "lint:fix": "npm run lint -- --fix",
     "babel-build": "npx babel src --out-dir lib"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-  ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": "last 3 versions",
   "devDependencies": {
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.4",
