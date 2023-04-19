@@ -42,7 +42,7 @@ run babel buid
 
 [+] React
 
-[-] PostCSS
+[+] PostCSS
 
 [-] BEM
 

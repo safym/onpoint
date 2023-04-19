@@ -1,4 +1,4 @@
-@import url("normalize.css");
+@import-normalize;
 @import url("sanitize.css");
 
 .App {
