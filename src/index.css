@@ -501,48 +501,70 @@
   position: absolute;
 }
 
-.App {
-  display: grid;
-  text-align: center;
+/* fonts:
+GILROY light reg extrabold
+DINPro 
+*/
+
+@font-face {
+  font-family: 'GilroyLight';
+  src: url('./assets/fonts/Gilroy-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'GilroyRegular';
+  src: url('./assets/fonts/Gilroy-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'GilroyExtraBold';
+  src: url('./assets/fonts/Gilroy-ExtraBold.woff') format('woff');
 }
 
-.App-logo {
-    -webkit-animation: App-logo-spin infinite 20s linear;
-            animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
+/* @font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot');  IE9 Compat Modes 
+  src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 
+       url('webfont.woff') format('woff'),  Modern Browsers 
+       url('webfont.ttf')  format('truetype'), Safari, Android, iOS 
+       url('webfont.svg#svgFontName') format('svg');  Legacy iOS 
+} */
 
-.App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: red;
-  }
-
-.App-title {
-    font-size: 1.5em;
-  }
-
-.App-intro {
-    font-size: large;
-  }
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.container {
+  /* width: 100px; */
+  height: 100vh;
+  border: 1px solid #ccc;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+
+.slide {
+  min-width: 100vw;
+  padding: 100px;
+  background-color: paleGreen;
+  color: black;
+  font-size: 30px;
+}
+
+.slide:nth-child(even) {
+  background-color: lightblue;
+}
+
+.header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+}
+
+.title {
+  font-size: 29.691px;
+  font-family: 'GilroyLight';
+  color: black;
+  text-transform: uppercase;
+  line-height: 1.073;
+  text-align: left;
 }
