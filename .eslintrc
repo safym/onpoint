@@ -3,7 +3,7 @@
   "rules": {
     "prefer-const": "warn",
     "no-console": "warn",
-    "quotes": ["warn", "single"],
+    "quotes": ["warn", "single", { "avoidEscape": true }],
     "jsx-quotes": ["warn", "prefer-double"],
     "indent": ["warn", 2],
     "max-len": ["warn", { "code": 120 }],
