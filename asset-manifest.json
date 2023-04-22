@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/onpoint/static/css/main.957c5e7a.css",
-    "main.js": "/onpoint/static/js/main.16ed85c8.js",
+    "main.css": "/onpoint/static/css/main.960c53b8.css",
+    "main.js": "/onpoint/static/js/main.cbe8a981.js",
     "static/media/bgfull.png": "/onpoint/static/media/bgfull.3296024a0d0832662a80.png",
     "static/media/Circe-Regular.eot": "/onpoint/static/media/Circe-Regular.13bbfad0e7f851273f3c.eot",
     "static/media/Circe-Regular.ttf": "/onpoint/static/media/Circe-Regular.814e4dd4329ffdb6c9ed.ttf",
@@ -30,11 +30,11 @@
     "static/media/corpuscule2.png": "/onpoint/static/media/corpuscule2.1e17fd884fa0c2a7bbe2.png",
     "static/media/corpusculeBlur.png": "/onpoint/static/media/corpusculeBlur.8cd4c2216d601bbbfb8c.png",
     "index.html": "/onpoint/index.html",
-    "main.957c5e7a.css.map": "/onpoint/static/css/main.957c5e7a.css.map",
-    "main.16ed85c8.js.map": "/onpoint/static/js/main.16ed85c8.js.map"
+    "main.960c53b8.css.map": "/onpoint/static/css/main.960c53b8.css.map",
+    "main.cbe8a981.js.map": "/onpoint/static/js/main.cbe8a981.js.map"
   },
   "entrypoints": [
-    "static/css/main.957c5e7a.css",
-    "static/js/main.16ed85c8.js"
+    "static/css/main.960c53b8.css",
+    "static/js/main.cbe8a981.js"
   ]
 }
