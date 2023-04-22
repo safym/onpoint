@@ -2,7 +2,7 @@ const ScrollableBlock = ({ children }) => {
   return (
     <>
       <div className="scrollable-block">
-        <div class="scrollable-block__content">
+        <div className="scrollable-block__content">
           <p>{children}</p>
         </div>
       </div>

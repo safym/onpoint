@@ -19,7 +19,11 @@ const PaginationContainer = ({ items, className }) => {
 
     for (let i = startItem; i <= endItem; i++) {
       const listMarker = (i + 1).toString().padStart(2, '0')
-      pageNumbers.push(<ListItem listMarker={listMarker}>{items[i]}</ListItem>)
+      pageNumbers.push(
+        <ListItem key={i} listMarker={listMarker}>
+          {items[i]}
+        </ListItem>
+      )
     }
 
     setPages([...pageNumbers])
@@ -28,6 +32,7 @@ const PaginationContainer = ({ items, className }) => {
     for (let i = 1; i <= totalPages; i++) {
       pagesLinks.push(
         <button
+          key={i}
           onClick={() => setPage(i)}
           className={`pagination__page-link ${
             page === i ? 'pagination__page-link--active' : ''
