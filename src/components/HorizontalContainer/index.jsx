@@ -1,18 +1,42 @@
 import React, { useRef, useEffect } from 'react'
 
-import Button from '../Button'
-import Title from '../Title'
-
-import home from '../../assets/images/homeS.png'
+import AdvantagesPage from '../../app/pages/AdvantagesPage'
+import MessagePage from '../../app/pages/MessagePage'
+import TitlePage from '../../app/pages/TitlePage'
+import Header from '../Header'
+import Icon from '../Icon'
 
 function HorizontalContainer() {
+  const [touchStart, setTouchStart] = React.useState(0)
+  const [touchEnd, setTouchEnd] = React.useState(0)
+  const [currentPage, setCurrentPage] = React.useState(0)
   const scrollRef = useRef(null)
+
   const pagesCount = 3
-  const pages = Array.from(Array(pagesCount).keys())
+  const pagesList = Array.from(Array(pagesCount).keys())
+
+  const handleTouchStart = (e) => {
+    e.preventDefault()
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 100) {
+      moveToPage(currentPage + 1)
+    }
+
+    if (touchStart - touchEnd < -100) {
+      moveToPage(currentPage - 1)
+    }
+  }
 
   useEffect(() => {
     const container = scrollRef.current
-    container.style.transform = `translateX(0vw)`
+    container.style.transform = 'translateX(0vw)'
 
     if (container) {
       const onWheel = (e) => {
@@ -27,11 +51,9 @@ function HorizontalContainer() {
             transform.indexOf('vw')
           )
         )
-
+        
         const currentPageNum = Math.abs(Math.trunc(value / 100))
-
-        e.preventDefault()
-
+        
         if (offsetY > 0) {
           moveToPage(currentPageNum + 1)
         } else {
@@ -44,7 +66,9 @@ function HorizontalContainer() {
   }, [])
 
   const moveToPage = (pageNum) => {
-    if (!pages.includes(pageNum)) return
+    if (!pagesList.includes(pageNum)) return
+
+    setCurrentPage(pageNum)
 
     const container = scrollRef.current
 
@@ -53,42 +77,21 @@ function HorizontalContainer() {
 
   return (
     <>
-      <header className="header">
-        <nav>
-          <button
-            className="header__navlink navlink"
-            onClick={() => moveToPage(0)}
-          >
-            <img src={home} />
-          </button>
-          <button
-            className="header__navlink navlink"
-            onClick={() => moveToPage(1)}
-          >
-            project
-          </button>
-        </nav>
-      </header>
-
+      <Header moveToPage={moveToPage} />
       <div
         className="container"
         ref={scrollRef}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        onTouchMove={handleTouchMove}
         style={{ transform: 'translateX(0vw)' }}
       >
-        <div className="page">
-          <Title size="small">привет,</Title>
-          <Title size="large">
-            это <span className="bold">не</span> <br />
-            коммерческое <br />
-            задание
-          </Title>
-          <Button className="button" icon="arrow">
-            Что дальше?
-          </Button>
-        </div>
-        <div className="page">2</div>
-        <div className="page">3</div>
+        <TitlePage />
+        <MessagePage />
+        <AdvantagesPage />
       </div>
+
+      <Icon iconName={'logo'} className="logo" />
     </>
   )
 }
