@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/onpoint/static/css/main.fcf4b8f6.css",
+    "main.css": "/onpoint/static/css/main.cbfb8a8d.css",
     "main.js": "/onpoint/static/js/main.cbe8a981.js",
     "static/media/bgfull.png": "/onpoint/static/media/bgfull.3296024a0d0832662a80.png",
     "static/media/Circe-Regular.eot": "/onpoint/static/media/Circe-Regular.13bbfad0e7f851273f3c.eot",
@@ -30,11 +30,11 @@
     "static/media/corpuscule2.png": "/onpoint/static/media/corpuscule2.1e17fd884fa0c2a7bbe2.png",
     "static/media/corpusculeBlur.png": "/onpoint/static/media/corpusculeBlur.8cd4c2216d601bbbfb8c.png",
     "index.html": "/onpoint/index.html",
-    "main.fcf4b8f6.css.map": "/onpoint/static/css/main.fcf4b8f6.css.map",
+    "main.cbfb8a8d.css.map": "/onpoint/static/css/main.cbfb8a8d.css.map",
     "main.cbe8a981.js.map": "/onpoint/static/js/main.cbe8a981.js.map"
   },
   "entrypoints": [
-    "static/css/main.fcf4b8f6.css",
+    "static/css/main.cbfb8a8d.css",
     "static/js/main.cbe8a981.js"
   ]
 }
