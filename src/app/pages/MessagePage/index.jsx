@@ -3,6 +3,8 @@ import React from 'react'
 import Page from '../../../components/Page'
 import Title from '../../../components/Title'
 import ScrollableBlock from '../../../components/ScrollableBlock'
+import AppearElement from '../../../components/AppearElement'
+
 
 function MessagePage() {
   return (
@@ -31,6 +33,12 @@ function MessagePage() {
         Ut enim blandit volutpat maecenas volutpat. Mauris sit amet massa vitae
         tortor condimentum lacinia quis vel.
       </ScrollableBlock>
+
+      <AppearElement imageName="pinksperm" className="message-page__img-1" />
+      <AppearElement imageName="pinksperm" className="message-page__img-2" />
+      <AppearElement imageName="pinksperm" className="message-page__img-3" />
+      <AppearElement imageName="pinksperm" className="message-page__img-4" />
+      <AppearElement imageName="pinksperm" className="message-page__img-5" />
     </Page>
   )
 }

@@ -50,9 +50,9 @@ function HorizontalContainer() {
             transform.indexOf('vw')
           )
         )
-        
+
         const currentPageNum = Math.abs(Math.trunc(value / 100))
-        
+
         if (offsetY > 0) {
           moveToPage(currentPageNum + 1)
         } else {
@@ -62,7 +62,7 @@ function HorizontalContainer() {
       container.addEventListener('wheel', onWheel)
       return () => container.removeEventListener('wheel', onWheel)
     }
-  }, [])
+  }, [scrollRef])
 
   const moveToPage = (pageNum) => {
     if (!pagesList.includes(pageNum)) return
@@ -85,7 +85,7 @@ function HorizontalContainer() {
         onTouchMove={handleTouchMove}
         style={{ transform: 'translateX(0vw)' }}
       >
-        <TitlePage />
+        <TitlePage moveToPage={moveToPage} />
         <MessagePage />
         <AdvantagesPage />
       </div>

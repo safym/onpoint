@@ -1,62 +1,10 @@
 @import-normalize;
+
 @import url('./lib/normalize.css');
 @import url('./lib/animations.css');
+@import url('./lib/variables.css');
+@import url('./lib/fontFaces.css');
 @import url('sanitize.css');
-
-/* ---FONTS----------------------------------------------- */
-@font-face {
-  font-family: 'Gilroy';
-  src: local('Gilroy'),
-    url('../fonts/Gilroy/gilroy-regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GilroyLight';
-  src: url('../fonts/Gilroy/Gilroy-Light.eot') format('embedded-opentype'),
-    url('../fonts/Gilroy/Gilroy-Light.woff') format('woff'),
-    url('../fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'GilroyBold';
-  src: url('../fonts/Gilroy/Gilroy-Bold.eot') format('embedded-opentype'),
-    url('../fonts/Gilroy/Gilroy-Bold.woff') format('woff'),
-    url('../fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'GilroyExtraBold';
-  src: url('../fonts/Gilroy/Gilroy-ExtraBold.eot') format('embedded-opentype'),
-    url('../fonts/Gilroy/Gilroy-ExtraBold.woff') format('woff'),
-    url('../fonts/Gilroy/Gilroy-ExtraBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'DINPro';
-  src: url('../fonts/DINPro/DINPro.eot') format('embedded-opentype'),
-    url('../fonts/DINPro/DINPro.woff') format('woff'),
-    url('../fonts/DINPro/DINPro.woff2') format('woff2'),
-    url('../fonts/DINPro/DINPro.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'CirceRegular';
-  src: url('../fonts/Circe/Circe-Regular.eot') format('embedded-opentype'),
-    url('../fonts/Circe/Circe-Regular.woff') format('woff'),
-    url('../fonts/Circe/Circe-Regular.ttf') format('truetype');
-}
-
-/* ---VARS----------------------------------------------- */
-:root {
-  --index: 1vh + 1vw;
-  --primatyColor: #ff6a9f;
-  --primatyColorLight: #faa8c5;
-  --primatyColorDark: #ae4d77;
-  --textColor: black;
-  --secondaryColor: #8cc9e8;
-}
 
 /* ---MAIN----------------------------------------------- */
 body {
@@ -122,7 +70,6 @@ body {
 .page {
   position: relative;
   min-width: 100vw;
-  /* padding: 15px; */
 
   &__content-wrapper {
     position: relative;
@@ -131,14 +78,10 @@ body {
     margin: 0 auto;
   }
 
-  &__title-page {
-    margin-top: 165px;
-    margin-left: 60px;
-  }
-
+  &__title-page,
   &__message-page {
     margin-top: 165px;
-    margin-left: calc(var(--index) * 4);
+    margin-left: 60px;
   }
 
   &__advantages-page {
@@ -217,6 +160,45 @@ body {
     width: 500px;
     bottom: -250px;
     left: -260px;
+  }
+}
+
+.message-page {
+  --opacity: 0.5;
+
+  position: relative;
+
+  &__img-1 {
+    opacity: var(--opacity);
+    filter: blur(1px);
+    top: -97px;
+    right: -160px;
+    width: 480px;
+  }
+  &__img-2 {
+    opacity: var(--opacity);
+    top: -75px;
+    right: -320px;
+    width: 765px;
+  }
+  &__img-3 {
+    top: -75px;
+    right: -515px;
+    width: 1175px;
+  }
+  &__img-4 {
+    opacity: var(--opacity);
+    filter: blur(3px);
+    top: 240px;
+    right: -580px;
+    width: 715px;
+  }
+  &__img-5 {
+    opacity: var(--opacity);
+    filter: blur(5px);
+    top: 346px;
+    right: -280px;
+    width: 480px;
   }
 }
 
@@ -408,7 +390,7 @@ body {
     font-family: 'DINPro';
     letter-spacing: 2px;
     font-size: 29px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   &--m {
     font-family: 'Gilroy';
@@ -447,22 +429,36 @@ body {
 
   width: var(--width);
   height: var(--height);
-  overflow-y: auto;
+  overflow-y: scroll;
   padding: 25px 25px 25px 100px;
   direction: rtl;
   font-family: 'DINPro';
   font-size: 22px;
+  z-index: 10;
 
   & p {
     direction: ltr;
   }
 
-  &__bg {
+  &__bg,
+  &__overflow-shadow {
     position: absolute;
-    width: var(--width);
-    height: var(--height);
+    top: 80px;
+    right: 130px;
+    width: 770px;
+    height: 455px;
     border-radius: 50px;
+  }
+
+  &__bg {
     background-color: white;
+    z-index: 9;
+    box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+  }
+
+  &__overflow-shadow {
+    z-index: 11;
+    box-shadow: inset white 0 -20px 10px, inset white 0 20px 10px;
   }
 
   &::-webkit-scrollbar {
@@ -539,6 +535,7 @@ body {
   }
 }
 
+/* ---pagination----------------------------------------------- */
 .pagination {
   &__controls {
     display: flex;
@@ -571,6 +568,27 @@ body {
 
 .floating-element {
   position: absolute;
+}
+
+.appear-element {
+  position: absolute;
+
+  &--animated {
+    animation-name: my-animation;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes my-animation {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .list-item {
