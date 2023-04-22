@@ -1,8 +1,16 @@
-# Getting Started with Create React App
+<h1 align="center">🦠 "Onpoint" layout</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,js" />
+  </a>
+</p>
 
-## Available Scripts
+## 🔗 Github Pages
+
+[DEPLOY Live link](https://safym.github.io/onpoint/)
+
+## 🛠 Commands
 
 Run app:
 
@@ -38,18 +46,16 @@ run babel buid
 
 ## Технологии
 
-[+] Git
+Git
 
-[+] React
+React
 
-[+] PostCSS
+PostCSS
 
-[-] BEM
+BEM
 
-[-] Webpack
+ESlint
 
-[+] ESlint
+Prettier
 
-[+] Prettier
-
-[+] babel
+babel
