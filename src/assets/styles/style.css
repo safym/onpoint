@@ -9,7 +9,6 @@
 /* ---MAIN----------------------------------------------- */
 body {
   font-family: 'GilroyRegular';
-  padding: 0;
   overflow: hidden;
   color: var(--textColor);
 }
@@ -214,10 +213,6 @@ body {
     gap: 50px;
   }
 
-  &__modal-title {
-    /* padding-left: 100px; */
-  }
-
   &__image {
     position: absolute;
     left: 45px;
@@ -328,7 +323,7 @@ body {
   right: 0px;
   bottom: 0px;
   background-color: #16273ead;
-  transition: 0.3s all;
+  transition: var(--transition);
 
   &__title {
     padding-left: 120px;
@@ -344,22 +339,23 @@ body {
     opacity: 0;
   }
 
-  padding: 200px;
-
   &__wrapper {
-    position: absolute;
-    top: 16vh;
-    right: 5vw;
-    border-radius: 50px;
-    padding: 200px 50px 20px 170px;
-    width: 790px;
+    width: 830px;
     height: 580px;
+    padding: 200px 50px 20px 170px;
+    border-radius: 50px;
+    background-color: var(--bgColor);
+    position: absolute;
+    top: 125px;
     z-index: 11;
 
-    background-color: rgb(255, 255, 255);
-  }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      right: 60px;
+    }
 
-  &__list {
+    @media only screen and (min-device-width: 1025px) {
+      right: 20vw;
+    }
   }
 
   &__close {
@@ -377,8 +373,8 @@ body {
   text-transform: uppercase;
   line-height: 1.1;
   text-align: left;
-  z-index: 10;
   overflow-wrap: normal;
+  z-index: 10;
 
   strong {
     padding: 0 10px;
@@ -407,8 +403,8 @@ body {
 /* ---WHITE-CARD----------------------------------------------- */
 .card {
   border-radius: 50px;
-  background-color: white;
-  box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+  background-color: var(--bgColor);
+  box-shadow: var(--blockShadow);
   font-family: 'DINPro';
   font-size: 22px;
   position: relative;
@@ -422,15 +418,11 @@ body {
 
 /* ---SCROLL-BLOCK----------------------------------------------- */
 .scrollable-block {
-  --width: 775px;
-  --height: 445px;
-
-  position: relative;
-
-  width: var(--width);
-  height: var(--height);
-  overflow-y: scroll;
+  width: 775px;
+  height: 445px;
   padding: 25px 25px 25px 100px;
+  position: relative;
+  overflow-y: scroll;
   direction: rtl;
   font-family: 'DINPro';
   font-size: 22px;
@@ -451,14 +443,14 @@ body {
   }
 
   &__bg {
-    background-color: white;
+    background-color: var(--bgColor);
     z-index: 9;
-    box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+    box-shadow: var(--blockShadow);
   }
 
   &__overflow-shadow {
     z-index: 11;
-    box-shadow: inset white 0 -20px 10px, inset white 0 20px 10px;
+    box-shadow: inset var(--bgColor) 0 -20px 10px, inset var(--bgColor) 0 20px 10px;
   }
 
   &::-webkit-scrollbar {
@@ -476,9 +468,6 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 8px;
-
     border-radius: 20px;
     background-color: var(--primatyColor);
     box-shadow: 5px 5px 5px 0px var(--primatyColorDark) inset,
@@ -535,12 +524,21 @@ body {
   }
 }
 
-/* ---pagination----------------------------------------------- */
+/* ---PAGINATION----------------------------------------------- */
 .pagination {
+  &__list {
+    & > li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
   &__controls {
     display: flex;
     align-items: center;
     column-gap: 15px;
+    margin: 20px 0;
   }
 
   &__control-link {
@@ -548,49 +546,19 @@ body {
   }
   &__page-link {
     z-index: 100;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 15px;
-    border: 2px solid var(--primatyColor);
+    box-shadow: var(--blackBorder);
 
     &--active {
+      box-shadow: var(--pinkBorder);
       background-color: var(--primatyColor);
     }
   }
 }
 
-.logo {
-  position: absolute;
-  bottom: 13px;
-  left: 70px;
-  width: 57px;
-}
-
-.floating-element {
-  position: absolute;
-}
-
-.appear-element {
-  position: absolute;
-
-  &--animated {
-    animation-name: my-animation;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-}
-
-@keyframes my-animation {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* ---PAGINATION----------------------------------------------- */
 .list-item {
   &__marker {
     font-family: 'GilroyExtraBold';
@@ -601,4 +569,17 @@ body {
     font-family: 'DINPro';
     font-size: 25px;
   }
+}
+
+/* ---LOGO----------------------------------------------- */
+.logo {
+  position: absolute;
+  bottom: 13px;
+  left: 70px;
+  width: 57px;
+}
+
+/* ---ANIMATED-ELEMENTS----------------------------------------------- */
+.floating-element {
+  position: absolute;
 }

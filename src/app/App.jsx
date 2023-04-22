@@ -1,11 +1,7 @@
-import HorizontalContainer from '../components/HorizontalContainer'
+import Gallery from '../components/Gallery'
 
 function App() {
-  return (
-    <>
-      <HorizontalContainer />
-    </>
-  )
+  return <Gallery />
 }
 
 export default App

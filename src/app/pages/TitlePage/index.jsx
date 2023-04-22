@@ -16,7 +16,12 @@ const TitlePage = ({ moveToPage }) => {
         коммерческое задание
       </Title>
 
-      <Button key="btn-next" className="title-page__button" icon="arrow" onClick={() => moveToPage(1)}>
+      <Button
+        key="btn-next"
+        className="title-page__button"
+        icon="arrow"
+        onClick={() => moveToPage(1)}
+      >
         Что дальше?
       </Button>
 

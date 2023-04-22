@@ -1,4 +1,4 @@
-function Page({ className, children, modalIsOpen }) {
+const Page = ({ className, children, modalIsOpen }) => {
   return (
     <>
       {modalIsOpen && <div className="page__modal-shadow"></div>}

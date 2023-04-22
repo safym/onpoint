@@ -1,6 +1,4 @@
-function Title(props) {
-  const { size, children } = props
-
+const Title = ({ size, children }) => {
   let classModify
 
   switch (size) {

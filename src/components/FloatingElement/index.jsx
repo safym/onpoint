@@ -24,10 +24,10 @@ const imageMap = {
 
 const FloatingElement = ({ imageName, className }) => {
   const image = imageMap[imageName]
+  const elClassName = `floating-element ${className}`
 
   return (
-    <div
-      className={`floating-element ${className}`}>
+    <div className={elClassName}>
       <img src={image} alt={imageName} />
     </div>
   )

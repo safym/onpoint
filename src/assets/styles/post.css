@@ -568,7 +568,6 @@
 /* ---MAIN----------------------------------------------- */
 body {
   font-family: 'GilroyRegular';
-  padding: 0;
   overflow: hidden;
   color: var(--textColor);
 }
@@ -798,10 +797,6 @@ body {
     gap: 50px;
   }
 
-.advantages-page__modal-title {
-    /* padding-left: 100px; */
-  }
-
 .advantages-page__image {
     position: absolute;
     left: 45px;
@@ -930,9 +925,9 @@ body {
   right: 0px;
   bottom: 0px;
   background-color: #16273ead;
-  -webkit-transition: 0.3s all;
-  -o-transition: 0.3s all;
-  transition: 0.3s all;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
 }
 
 .modal__title {
@@ -949,26 +944,30 @@ body {
     opacity: 0;
   }
 
-.modal {
+.modal__wrapper {
+    width: 830px;
+    height: 580px;
+    padding: 200px 50px 20px 170px;
+    border-radius: 50px;
+    background-color: var(--bgColor);
+    position: absolute;
+    top: 125px;
+    z-index: 11;
+  }
 
-  padding: 200px;
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
 .modal__wrapper {
-    position: absolute;
-    top: 16vh;
-    right: 5vw;
-    border-radius: 50px;
-    padding: 200px 50px 20px 170px;
-    width: 790px;
-    height: 580px;
-    z-index: 11;
-
-    background-color: rgb(255, 255, 255);
+      right: 60px
   }
+    }
 
-.modal__list {
+@media only screen and (min-device-width: 1025px) {
+
+.modal__wrapper {
+      right: 20vw
   }
+    }
 
 .modal__close {
     position: absolute;
@@ -984,8 +983,8 @@ body {
   text-transform: uppercase;
   line-height: 1.1;
   text-align: left;
-  z-index: 10;
   overflow-wrap: normal;
+  z-index: 10;
 }
 .title strong {
     padding: 0 10px;
@@ -1012,9 +1011,9 @@ body {
 /* ---WHITE-CARD----------------------------------------------- */
 .card {
   border-radius: 50px;
-  background-color: white;
-  -webkit-box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
-          box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+  background-color: var(--bgColor);
+  -webkit-box-shadow: var(--blockShadow);
+          box-shadow: var(--blockShadow);
   font-family: 'DINPro';
   font-size: 22px;
   position: relative;
@@ -1027,15 +1026,11 @@ body {
 
 /* ---SCROLL-BLOCK----------------------------------------------- */
 .scrollable-block {
-  --width: 775px;
-  --height: 445px;
-
-  position: relative;
-
-  width: var(--width);
-  height: var(--height);
-  overflow-y: scroll;
+  width: 775px;
+  height: 445px;
   padding: 25px 25px 25px 100px;
+  position: relative;
+  overflow-y: scroll;
   direction: rtl;
   font-family: 'DINPro';
   font-size: 22px;
@@ -1054,15 +1049,15 @@ body {
     border-radius: 50px;
   }
 .scrollable-block__bg {
-    background-color: white;
+    background-color: var(--bgColor);
     z-index: 9;
-    -webkit-box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
-            box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+    -webkit-box-shadow: var(--blockShadow);
+            box-shadow: var(--blockShadow);
   }
 .scrollable-block__overflow-shadow {
     z-index: 11;
-    -webkit-box-shadow: inset white 0 -20px 10px, inset white 0 20px 10px;
-            box-shadow: inset white 0 -20px 10px, inset white 0 20px 10px;
+    -webkit-box-shadow: inset var(--bgColor) 0 -20px 10px, inset var(--bgColor) 0 20px 10px;
+            box-shadow: inset var(--bgColor) 0 -20px 10px, inset var(--bgColor) 0 20px 10px;
   }
 .scrollable-block::-webkit-scrollbar {
     width: 20px;
@@ -1077,9 +1072,6 @@ body {
     width: 20px;
   }
 .scrollable-block::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 8px;
-
     border-radius: 20px;
     background-color: var(--primatyColor);
     -webkit-box-shadow: 5px 5px 5px 0px var(--primatyColorDark) inset,
@@ -1156,7 +1148,10 @@ body {
     font-size: 27px;
   }
 
-/* ---pagination----------------------------------------------- */
+/* ---PAGINATION----------------------------------------------- */
+.pagination__list > li:not(:last-child) {
+        margin-bottom: 10px;
+      }
 .pagination__controls {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1167,21 +1162,37 @@ body {
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
             column-gap: 15px;
+    margin: 20px 0;
   }
 .pagination__control-link {
     max-height: 15px;
   }
 .pagination__page-link {
     z-index: 100;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 15px;
-    border: 2px solid var(--primatyColor);
+    -webkit-box-shadow: var(--blackBorder);
+            box-shadow: var(--blackBorder);
   }
 .pagination__page-link--active {
+      -webkit-box-shadow: var(--pinkBorder);
+              box-shadow: var(--pinkBorder);
       background-color: var(--primatyColor);
     }
 
+/* ---PAGINATION----------------------------------------------- */
+.list-item__marker {
+    font-family: 'GilroyExtraBold';
+    font-size: 25px;
+    color: var(--secondaryColor);
+  }
+.list-item__text {
+    font-family: 'DINPro';
+    font-size: 25px;
+  }
+
+/* ---LOGO----------------------------------------------- */
 .logo {
   position: absolute;
   bottom: 13px;
@@ -1189,56 +1200,7 @@ body {
   width: 57px;
 }
 
+/* ---ANIMATED-ELEMENTS----------------------------------------------- */
 .floating-element {
   position: absolute;
 }
-
-.appear-element {
-  position: absolute;
-}
-
-.appear-element--animated {
-    -webkit-animation-name: my-animation;
-            animation-name: my-animation;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-  }
-
-@-webkit-keyframes my-animation {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes my-animation {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-.list-item__marker {
-    font-family: 'GilroyExtraBold';
-    font-size: 25px;
-    color: var(--secondaryColor);
-  }
-
-.list-item__text {
-    font-family: 'DINPro';
-    font-size: 25px;
-  }

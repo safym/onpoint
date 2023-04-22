@@ -5,8 +5,7 @@ import Title from '../../../components/Title'
 import ScrollableBlock from '../../../components/ScrollableBlock'
 import AppearElement from '../../../components/AppearElement'
 
-
-function MessagePage() {
+const MessagePage = () => {
   return (
     <Page className={'message-page'}>
       <Title size="small">

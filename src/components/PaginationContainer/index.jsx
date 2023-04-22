@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
+import ListItem from '../ListItem'
 import Icon from '../Icon'
 
 const PAGE_ITEMS = 3
@@ -18,12 +19,7 @@ const PaginationContainer = ({ items, className }) => {
 
     for (let i = startItem; i <= endItem; i++) {
       const listMarker = (i + 1).toString().padStart(2, '0')
-      pageNumbers.push(
-        <li className="pagination__list-item list-item">
-          <div className="list-item__marker">{listMarker}</div>
-          <div className="list-item__text">{items[i]} </div>
-        </li>
-      )
+      pageNumbers.push(<ListItem listMarker={listMarker}>{items[i]}</ListItem>)
     }
 
     setPages([...pageNumbers])

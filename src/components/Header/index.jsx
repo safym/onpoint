@@ -1,6 +1,6 @@
 import Icon from '../Icon'
 
-function Header({ moveToPage }) {
+const Header = ({ moveToPage }) => {
   return (
     <header className="header">
       <nav>
@@ -8,7 +8,7 @@ function Header({ moveToPage }) {
           className="header__navlink navlink"
           onClick={() => moveToPage(0)}
         >
-          <Icon iconName={'home'} className="header__icon"/>
+          <Icon iconName={'home'} className="header__icon" />
         </button>
         <button
           className="header__navlink navlink"

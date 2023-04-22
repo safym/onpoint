@@ -6,36 +6,44 @@ import TitlePage from '../../app/pages/TitlePage'
 import Header from '../Header'
 import Icon from '../Icon'
 
-function HorizontalContainer() {
+const TRANSLATE_RESET = 'translateX(0vw)'
+const PAGES_COUNT = 3
+
+const HorizontalContainer = () =>{
   const [touchStart, setTouchStart] = React.useState(0)
   const [touchEnd, setTouchEnd] = React.useState(0)
   const [currentPage, setCurrentPage] = React.useState(0)
   const scrollRef = useRef(null)
 
-  const pagesCount = 3
-  const pagesList = Array.from(Array(pagesCount).keys())
+  const pagesList = Array.from(Array(PAGES_COUNT).keys())
 
-  const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX)
+  const handleSwipeStart = (e) => {
+    if (e.type === 'touchstart') {
+      setTouchStart(e.targetTouches[0].clientX)
+    } else if (e.type === 'mousedown') {
+      setTouchStart(e.clientX)
+    }
   }
 
-  const handleTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX)
+  const handleSwipeMove = (e) => {
+    if (e.type === 'touchmove') {
+      setTouchEnd(e.targetTouches[0].clientX)
+    } else if (e.type === 'mousemove') {
+      setTouchEnd(e.clientX)
+    }
   }
 
-  const handleTouchEnd = () => {
+  const handleSwipeEnd = () => {
     if (touchStart - touchEnd > 100) {
       moveToPage(currentPage + 1)
-    }
-
-    if (touchStart - touchEnd < -100) {
+    } else if (touchStart - touchEnd < -100) {
       moveToPage(currentPage - 1)
     }
   }
 
   useEffect(() => {
     const container = scrollRef.current
-    container.style.transform = 'translateX(0vw)'
+    container.style.transform = TRANSLATE_RESET
 
     if (container) {
       const onWheel = (e) => {
@@ -80,10 +88,13 @@ function HorizontalContainer() {
       <div
         className="container"
         ref={scrollRef}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-        onTouchMove={handleTouchMove}
-        style={{ transform: 'translateX(0vw)' }}
+        onTouchStart={handleSwipeStart}
+        onTouchMove={handleSwipeMove}
+        onTouchEnd={handleSwipeEnd}
+        onMouseDown={handleSwipeStart}
+        onMouseMove={handleSwipeMove}
+        onMouseUp={handleSwipeEnd}
+        style={{ transform: TRANSLATE_RESET }}
       >
         <TitlePage moveToPage={moveToPage} />
         <MessagePage />

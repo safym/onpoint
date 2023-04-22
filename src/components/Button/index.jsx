@@ -1,8 +1,10 @@
 import Icon from '../Icon'
 
-function Button({ onClick, icon, className, children }) {
+const Button = ({ onClick, icon, className, children }) => {
+  const elClassName = `button ${className}`
+
   return (
-    <button className={`button ${className}`} onClick={onClick}>
+    <button className={elClassName} onClick={onClick}>
       <div className="button__icon-border">
         <div className="button__icon-wrapper">
           <Icon className="button__icon" iconName={icon} />

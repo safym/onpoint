@@ -1,6 +1,4 @@
-import Card from '../Card'
-
-function ScrollableBlock({ children, text }) {
+const ScrollableBlock = ({ children }) => {
   return (
     <>
       <div className="scrollable-block">

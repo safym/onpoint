@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 
 import pinksperm from '../../assets/images/pinksperm.png'
 
@@ -8,11 +8,10 @@ const imageMap = {
 
 const AppearElement = ({ imageName, className }) => {
   const image = imageMap[imageName]
+  const elClassName = `appear-element ${className}`
 
   return (
-    <div
-      className={`appear-element ${className}`}
-    >
+    <div className={elClassName}>
       <img src={image} alt={imageName} />
     </div>
   )

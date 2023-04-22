@@ -2,15 +2,13 @@ import React from 'react'
 
 import Icon from '../Icon'
 
-function Card({ children, iconName, className }) {
+const Card = ({ children, iconName, className }) => {
+  const elClassName = `card ${className}`
+  const iconClassName = `card__icon ${className}-${iconName}`
+
   return (
-    <div className={`card ${className}`}>
-      {iconName && (
-        <Icon
-          iconName={iconName}
-          className={`card__icon ${className}-${iconName}`}
-        />
-      )}
+    <div className={elClassName}>
+      {iconName && <Icon iconName={iconName} className={iconClassName} />}
       {children}
     </div>
   )

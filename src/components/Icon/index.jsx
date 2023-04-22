@@ -1,14 +1,12 @@
-/* eslint-disable no-unused-vars */
-import arrow from '../../assets/images/arrow.png'
-import home from '../../assets/images/home.png'
-import logo from '../../assets/images/logo.png'
-import plus from '../../assets/images/plus.png'
-import meal from '../../assets/images/iconMeal.png'
-import regimen from '../../assets/images/iconRegimen.png'
-import close from '../../assets/images/close.png'
-import prev from '../../assets/images/prev.png'
-import next from '../../assets/images/next.png'
-
+import arrow from '../../assets/icons/arrow.png'
+import home from '../../assets/icons/home.png'
+import logo from '../../assets/icons/logo.png'
+import plus from '../../assets/icons/plus.png'
+import meal from '../../assets/icons/iconMeal.png'
+import regimen from '../../assets/icons/iconRegimen.png'
+import close from '../../assets/icons/close.png'
+import prev from '../../assets/icons/prev.png'
+import next from '../../assets/icons/next.png'
 
 const iconMap = {
   arrow: arrow,

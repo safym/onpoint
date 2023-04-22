@@ -19,7 +19,7 @@ const advantagesList = [
   'Venenatis lectus magna fringilla urna',
 ]
 
-function MessagePage() {
+const MessagePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
   const toggleModal = () => {
@@ -49,16 +49,13 @@ function MessagePage() {
               </Title>
             </div>
           </div>
-
           <Card className="advantages-page__meal" iconName="meal">
             Ehicula ipsum a arcu cursus vitae. Eu non diam phasellus vestibulum
             lorem sed risus ultricies
           </Card>
-
           <Card className="advantages-page__regimen" iconName="regimen">
             Aarcu cursus vitae
           </Card>
-
           <div className="advantages-page__button-wrapper">
             <Button
               key="btn-more"

@@ -3,6 +3,7 @@
   padding: 0px;
   margin: 0px;
   border: none;
+  user-select: none;
 }
 
 *,
@@ -73,6 +74,7 @@ img {
 
 img,
 svg {
+  pointer-events: none;
   max-width: 100%;
   height: auto;
 }
