@@ -1,19 +1,15 @@
 {
   "files": {
-    "main.css": "/onpoint/static/css/main.ec9ce283.css",
-    "main.js": "/onpoint/static/js/main.07846d6d.js",
-    "static/media/bgfull.png": "/onpoint/static/media/bgfull.9b95402d2c5c69f8e17d.png",
-    "static/media/bottle.png": "/onpoint/static/media/bottle.0a23a3f05774b21d0754.png",
+    "main.css": "/onpoint/static/css/main.957c5e7a.css",
+    "main.js": "/onpoint/static/js/main.16ed85c8.js",
+    "static/media/bgfull.png": "/onpoint/static/media/bgfull.3296024a0d0832662a80.png",
     "static/media/Circe-Regular.eot": "/onpoint/static/media/Circe-Regular.13bbfad0e7f851273f3c.eot",
     "static/media/Circe-Regular.ttf": "/onpoint/static/media/Circe-Regular.814e4dd4329ffdb6c9ed.ttf",
-    "static/media/pinksperm.png": "/onpoint/static/media/pinksperm.fc5eae1c41ef761336f1.png",
-    "static/media/corpuscule1.png": "/onpoint/static/media/corpuscule1.92efc08f401878432019.png",
+    "static/media/bottle.png": "/onpoint/static/media/bottle.cb630f5a3478abdff725.png",
     "static/media/Circe-Regular.woff": "/onpoint/static/media/Circe-Regular.b3583e41e063203a7e74.woff",
     "static/media/DINPro.eot": "/onpoint/static/media/DINPro.3f7460ea717cff95bc69.eot",
     "static/media/DINPro.ttf": "/onpoint/static/media/DINPro.1b0768c360d049fff810.ttf",
-    "static/media/corpuscule3.png": "/onpoint/static/media/corpuscule3.1962dc1b557f617ac114.png",
-    "static/media/corpuscule4.png": "/onpoint/static/media/corpuscule4.003e053e13f134d835b8.png",
-    "static/media/blueBubble1.png": "/onpoint/static/media/blueBubble1.a23121bb0c4b568edb36.png",
+    "static/media/corpuscule1.png": "/onpoint/static/media/corpuscule1.df93b6253c6d7324d73c.png",
     "static/media/Gilroy-Light.eot": "/onpoint/static/media/Gilroy-Light.8862796bffbd019727b3.eot",
     "static/media/Gilroy-Light.ttf": "/onpoint/static/media/Gilroy-Light.1b7fff53076b21283967.ttf",
     "static/media/Gilroy-Bold.eot": "/onpoint/static/media/Gilroy-Bold.a732fed1bc6140852a0b.eot",
@@ -21,21 +17,24 @@
     "static/media/Gilroy-Bold.ttf": "/onpoint/static/media/Gilroy-Bold.b900325e44ec0c673e88.ttf",
     "static/media/Gilroy-ExtraBold.eot": "/onpoint/static/media/Gilroy-ExtraBold.9000ed2a78b7dba6fcd6.eot",
     "static/media/Gilroy-ExtraBold.ttf": "/onpoint/static/media/Gilroy-ExtraBold.0ac6879cd286550da903.ttf",
-    "static/media/corpusculeBlur.png": "/onpoint/static/media/corpusculeBlur.62b58e6d39b01774eb86.png",
+    "static/media/pinksperm.png": "/onpoint/static/media/pinksperm.192ed77b177640f3965f.png",
     "static/media/DINPro.woff": "/onpoint/static/media/DINPro.1871e3d59b6b24eb537d.woff",
-    "static/media/pinkBubble2.png": "/onpoint/static/media/pinkBubble2.25b45e6b4c2bb1a9b490.png",
+    "static/media/corpuscule3.png": "/onpoint/static/media/corpuscule3.4fd5d7542b7b7eeb31ac.png",
     "static/media/Gilroy-Bold.woff": "/onpoint/static/media/Gilroy-Bold.5fb38b9fa452b5814397.woff",
     "static/media/Gilroy-Light.woff": "/onpoint/static/media/Gilroy-Light.9df2f5dbbb9c90a6ede7.woff",
     "static/media/Gilroy-ExtraBold.woff": "/onpoint/static/media/Gilroy-ExtraBold.cb761043a2e505ff53c1.woff",
     "static/media/DINPro.woff2": "/onpoint/static/media/DINPro.560be2f6f935581d7d62.woff2",
-    "static/media/corpuscule2.png": "/onpoint/static/media/corpuscule2.ecaf4d33854083fa811f.png",
-    "static/media/blueBubble2.png": "/onpoint/static/media/blueBubble2.71dc4b4eadcb0d231933.png",
+    "static/media/corpuscule4.png": "/onpoint/static/media/corpuscule4.075871c4f7eb292f001f.png",
+    "static/media/blueBubble1.png": "/onpoint/static/media/blueBubble1.c855ddf8ca6474c8641b.png",
+    "static/media/pinkBubble2.png": "/onpoint/static/media/pinkBubble2.5d3b7dd5e8243cc0633c.png",
+    "static/media/corpuscule2.png": "/onpoint/static/media/corpuscule2.1e17fd884fa0c2a7bbe2.png",
+    "static/media/corpusculeBlur.png": "/onpoint/static/media/corpusculeBlur.8cd4c2216d601bbbfb8c.png",
     "index.html": "/onpoint/index.html",
-    "main.ec9ce283.css.map": "/onpoint/static/css/main.ec9ce283.css.map",
-    "main.07846d6d.js.map": "/onpoint/static/js/main.07846d6d.js.map"
+    "main.957c5e7a.css.map": "/onpoint/static/css/main.957c5e7a.css.map",
+    "main.16ed85c8.js.map": "/onpoint/static/js/main.16ed85c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec9ce283.css",
-    "static/js/main.07846d6d.js"
+    "static/css/main.957c5e7a.css",
+    "static/js/main.16ed85c8.js"
   ]
 }
