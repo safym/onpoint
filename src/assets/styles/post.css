@@ -742,7 +742,6 @@ body {
 
 .message-page {
   --opacity: 0.5;
-
   position: relative;
 }
 
@@ -841,9 +840,6 @@ body {
 
 .advantages-page__button {
     max-width: 100%;
-  }
-
-.advantages-page__modal {
   }
 
 .advantages-page__img-1 {
@@ -1056,8 +1052,10 @@ body {
   }
 .scrollable-block__overflow-shadow {
     z-index: 11;
-    -webkit-box-shadow: inset var(--bgColor) 0 -20px 10px, inset var(--bgColor) 0 20px 10px;
-            box-shadow: inset var(--bgColor) 0 -20px 10px, inset var(--bgColor) 0 20px 10px;
+    -webkit-box-shadow: inset var(--bgColor) 0 -20px 10px,
+      inset var(--bgColor) 0 20px 10px;
+            box-shadow: inset var(--bgColor) 0 -20px 10px,
+      inset var(--bgColor) 0 20px 10px;
   }
 .scrollable-block::-webkit-scrollbar {
     width: 20px;
@@ -1201,6 +1199,12 @@ body {
 }
 
 /* ---ANIMATED-ELEMENTS----------------------------------------------- */
-.floating-element {
+.floating-element,
+.appear-element {
   position: absolute;
+}
+
+.appear-element {
+  -webkit-animation: appear 15s linear infinite;
+          animation: appear 15s linear infinite;
 }

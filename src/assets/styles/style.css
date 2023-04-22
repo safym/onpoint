@@ -104,12 +104,14 @@ body {
     right: 250px;
     animation: floatingСlockwise 20s linear infinite;
   }
+
   &__img-2 {
     width: 65px;
     top: -100px;
     right: 200px;
     animation: floatingСlockwise 20s linear infinite;
   }
+
   &__img-3 {
     transform: rotate(45deg);
     width: 70px;
@@ -118,6 +120,7 @@ body {
     left: -40px;
     animation: floatingCounterclockwise 5s linear infinite;
   }
+
   &__img-4 {
     width: 220px;
     top: -100px;
@@ -164,7 +167,6 @@ body {
 
 .message-page {
   --opacity: 0.5;
-
   position: relative;
 
   &__img-1 {
@@ -174,17 +176,20 @@ body {
     right: -160px;
     width: 480px;
   }
+
   &__img-2 {
     opacity: var(--opacity);
     top: -75px;
     right: -320px;
     width: 765px;
   }
+
   &__img-3 {
     top: -75px;
     right: -515px;
     width: 1175px;
   }
+
   &__img-4 {
     opacity: var(--opacity);
     filter: blur(3px);
@@ -192,6 +197,7 @@ body {
     right: -580px;
     width: 715px;
   }
+
   &__img-5 {
     opacity: var(--opacity);
     filter: blur(5px);
@@ -232,23 +238,24 @@ body {
     max-width: 680px;
     z-index: 16;
   }
+
   &__meal {
     grid-area: meal;
     padding: 40px 40px 40px 110px;
   }
+
   &__regimen {
     grid-area: reg;
     padding: 45px;
   }
+
   &__button-wrapper {
     position: relative;
     grid-area: btn;
   }
+
   &__button {
     max-width: 100%;
-  }
-
-  &__modal {
   }
 
   &__img-1 {
@@ -450,7 +457,8 @@ body {
 
   &__overflow-shadow {
     z-index: 11;
-    box-shadow: inset var(--bgColor) 0 -20px 10px, inset var(--bgColor) 0 20px 10px;
+    box-shadow: inset var(--bgColor) 0 -20px 10px,
+      inset var(--bgColor) 0 20px 10px;
   }
 
   &::-webkit-scrollbar {
@@ -565,6 +573,7 @@ body {
     font-size: 25px;
     color: var(--secondaryColor);
   }
+
   &__text {
     font-family: 'DINPro';
     font-size: 25px;
@@ -580,6 +589,11 @@ body {
 }
 
 /* ---ANIMATED-ELEMENTS----------------------------------------------- */
-.floating-element {
+.floating-element,
+.appear-element {
   position: absolute;
+}
+
+.appear-element {
+  animation: appear 15s linear infinite;
 }

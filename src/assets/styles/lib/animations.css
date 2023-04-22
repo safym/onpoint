@@ -54,18 +54,41 @@
 
 @-webkit-keyframes transtale {
   0% {
-    transform: translate(-0%,-0%) rotate(0deg);    
+    transform: translate(0%, 0%) rotate(0deg);
   }
   25% {
-    transform: translate(-75%,-50%) rotate(50deg); 
+    transform: translate(-75%, -50%) rotate(50deg);
   }
   50% {
-    transform: translate(-50%,50%) rotate(120deg); 
+    transform: translate(-50%, 50%) rotate(120deg);
   }
   75% {
-    transform: translate(50%,75%) rotate(50deg); 
+    transform: translate(50%, 75%) rotate(50deg);
   }
   100% {
-    transform: translate(-0%,-0%) rotate(0deg); 
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 0%);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translate(-2%, -1%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-2%, -2%);
+  }
+  75% {
+    opacity: 0.25;
+    transform: translate(-1%, 0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0%, 0%);
   }
 }
