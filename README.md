@@ -24,12 +24,12 @@
 
 ## 📸 Screenshots
 <div align="center">
-    <img height="230px" src="https://user-images.githubusercontent.com/99616798/233811231-8b5e3e21-0826-416a-9340-a85c878ff8ad.png" />
-    <img height="230px" src="https://user-images.githubusercontent.com/99616798/233811239-2325ef89-87b5-45b9-aac1-fadc447e2099.png" />
+    <img height="300px" src="https://user-images.githubusercontent.com/99616798/233811231-8b5e3e21-0826-416a-9340-a85c878ff8ad.png" />
+    <img height="300px" src="https://user-images.githubusercontent.com/99616798/233811239-2325ef89-87b5-45b9-aac1-fadc447e2099.png" />
 </div>
 <div align="center">
-    <img height="230px" src="https://user-images.githubusercontent.com/99616798/233811252-4f7a0c0d-1b3a-4087-81bc-3898e2a3f7ab.png" />
-    <img height="230px" src="https://user-images.githubusercontent.com/99616798/233811254-362653a6-88bf-44b2-9b49-b8cb2ae965ed.png" />
+    <img height="300px" src="https://user-images.githubusercontent.com/99616798/233811252-4f7a0c0d-1b3a-4087-81bc-3898e2a3f7ab.png" />
+    <img height="300px" src="https://user-images.githubusercontent.com/99616798/233811254-362653a6-88bf-44b2-9b49-b8cb2ae965ed.png" />
 </div>
 
 ## 📑 Требования:
