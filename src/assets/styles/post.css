@@ -943,7 +943,7 @@ body {
 .modal__wrapper {
     width: 830px;
     height: 580px;
-    padding: 200px 50px 20px 170px;
+    padding: 200px 50px 20px 220px;
     border-radius: 50px;
     background-color: var(--bgColor);
     position: absolute;
