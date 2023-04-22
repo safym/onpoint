@@ -16,7 +16,6 @@ function HorizontalContainer() {
   const pagesList = Array.from(Array(pagesCount).keys())
 
   const handleTouchStart = (e) => {
-    e.preventDefault()
     setTouchStart(e.targetTouches[0].clientX)
   }
 

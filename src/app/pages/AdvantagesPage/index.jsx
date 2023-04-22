@@ -33,12 +33,12 @@ function MessagePage() {
         modalIsOpen={modalIsOpen}
         toggleModal={toggleModal}
       >
-        <div className="advantages-page__title">
+        {/* <div className="advantages-page__title">
           <Title size="small">преимущества</Title>
           <Title size="medium">
-            brend <span className="bold">XY</span>
+            brend <strong>XY</strong>
           </Title>
-        </div>
+        </div> */}
 
         <PaginationContainer items={advantagesList} />
       </Modal>
@@ -48,9 +48,11 @@ function MessagePage() {
         <div className="advantages-page__content-wrapper">
           <div className="advantages-page__title">
             <div className="advantages-page__title-wrapper">
-              <Title size="small">ключевое сообщение</Title>
+              <Title size="small">
+                {modalIsOpen ? 'преимущества' : 'ключевое сообщение'}  
+              </Title>
               <Title size="medium">
-                brend <span className="bold">XY</span>
+                brend <strong>XY</strong>
               </Title>
             </div>
           </div>

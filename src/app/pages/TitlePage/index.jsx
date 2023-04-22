@@ -11,7 +11,7 @@ const TitlePage = ({ moveToPage }) => {
       <Title size="small">привет,</Title>
       <Title size="large">
         это
-        <span className="bold">не</span>
+        <strong>не</strong>
         <br />
         коммерческое задание
       </Title>

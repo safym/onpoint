@@ -555,6 +555,7 @@
   --primatyColorLight: #faa8c5;
   --primatyColorDark: #ae4d77;
   --textColor: black;
+  --secondaryColor: #8cc9e8;
 }
 
 /* ---MAIN----------------------------------------------- */
@@ -629,7 +630,6 @@ body {
 .page {
   position: relative;
   min-width: 100vw;
-  
 }
 /* padding: 15px; */
 .page__content-wrapper {
@@ -665,54 +665,54 @@ body {
     width: 225px;
     bottom: -300px;
     right: 250px;
-    -webkit-animation: floatingСlockwise 20s  linear infinite;
-            animation: floatingСlockwise 20s  linear infinite;
+    -webkit-animation: floatingСlockwise 20s linear infinite;
+            animation: floatingСlockwise 20s linear infinite;
   }
 
 .title-page__img-2 {
-    width: 65px; 
+    width: 65px;
     top: -100px;
     right: 200px;
-    -webkit-animation: floatingСlockwise 20s  linear infinite;
-            animation: floatingСlockwise 20s  linear infinite;
+    -webkit-animation: floatingСlockwise 20s linear infinite;
+            animation: floatingСlockwise 20s linear infinite;
   }
 
 .title-page__img-3 {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-    width: 70px; 
-    height: 70px; 
+    width: 70px;
+    height: 70px;
     bottom: -10px;
     left: -40px;
-    -webkit-animation: floatingCounterclockwise 5s  linear infinite;
-            animation: floatingCounterclockwise 5s  linear infinite;
+    -webkit-animation: floatingCounterclockwise 5s linear infinite;
+            animation: floatingCounterclockwise 5s linear infinite;
   }
 
 .title-page__img-4 {
-    width: 220px; 
+    width: 220px;
     top: -100px;
     left: -155px;
   }
 
 .title-page__img-5 {
-    width: 110px; 
+    width: 110px;
     top: 30px;
     right: 30px;
-    -webkit-animation: transtale 20s  linear infinite;
-            animation: transtale 20s  linear infinite;
+    -webkit-animation: transtale 20s linear infinite;
+            animation: transtale 20s linear infinite;
   }
 
 .title-page__img-6 {
     opacity: 0.5;
-    width: 90px; 
+    width: 90px;
     top: -150px;
     right: 30px;
   }
 
 .title-page__img-7 {
     opacity: 0.7;
-    width: 90px; 
+    width: 90px;
     bottom: -150px;
     left: 260px;
   }
@@ -733,7 +733,7 @@ body {
     -webkit-transform: rotate(-220deg);
         -ms-transform: rotate(-220deg);
             transform: rotate(-220deg);
-    width: 500px; 
+    width: 500px;
     bottom: -250px;
     left: -260px;
   }
@@ -756,13 +756,13 @@ body {
 .advantages-page__image {
     position: absolute;
     left: 45px;
-    top: -80px; 
+    top: -80px;
     max-height: 700px;
     z-index: 20;
     border-radius: 20px;
   }
 
-.advantages-page__title { 
+.advantages-page__title {
     position: relative;
     grid-area: title;
     display: -webkit-box;
@@ -776,8 +776,8 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     padding-left: 120px;
-    /* align-items: center; */
-    z-index: 9;
+    max-width: 680px;
+    z-index: 16;
   }
 
 .advantages-page__meal {
@@ -800,79 +800,78 @@ body {
   }
 
 .advantages-page__modal {
-
   }
 
 .advantages-page__img-1 {
-    width: 140px; 
+    width: 140px;
     bottom: -200px;
     left: 170px;
     z-index: 22;
-    -webkit-animation: scale 10s  linear infinite;
-            animation: scale 10s  linear infinite;
+    -webkit-animation: scale 10s linear infinite;
+            animation: scale 10s linear infinite;
   }
 
 .advantages-page__img-2 {
-    width: 65px; 
+    width: 65px;
     top: -5px;
     left: 170px;
     z-index: 22;
-    -webkit-animation: floatingCounterclockwise 5s  linear infinite;
-            animation: floatingCounterclockwise 5s  linear infinite;
+    -webkit-animation: floatingCounterclockwise 5s linear infinite;
+            animation: floatingCounterclockwise 5s linear infinite;
   }
 
 .advantages-page__img-3 {
-    width: 30px; 
+    width: 30px;
     bottom: 170px;
-    left:0px;
+    left: 0px;
     z-index: 22;
-    -webkit-animation: transtale 25s  linear infinite;
-            animation: transtale 25s  linear infinite;
+    -webkit-animation: transtale 25s linear infinite;
+            animation: transtale 25s linear infinite;
   }
 
 .advantages-page__img-4 {
-    width: 40px; 
+    width: 40px;
     top: -100px;
-    left:180px;
+    left: 180px;
     z-index: 22;
-    -webkit-animation: transtale 20s  linear infinite;
-            animation: transtale 20s  linear infinite;
+    -webkit-animation: transtale 20s linear infinite;
+            animation: transtale 20s linear infinite;
   }
 
 .advantages-page__img-5 {
-    width: 60px; 
+    width: 60px;
     bottom: 0px;
     left: 240px;
     z-index: 19;
-    -webkit-animation: floatingCounterclockwise 20s  linear infinite;
-            animation: floatingCounterclockwise 20s  linear infinite;
+    -webkit-animation: floatingCounterclockwise 20s linear infinite;
+            animation: floatingCounterclockwise 20s linear infinite;
   }
 
 .advantages-page__img-6 {
-    width: 35px; 
+    width: 35px;
     top: 50px;
     left: 60px;
     z-index: 22;
-    -webkit-animation: transtale 10s  linear infinite;
-            animation: transtale 10s  linear infinite;
+    -webkit-animation: transtale 10s linear infinite;
+            animation: transtale 10s linear infinite;
   }
 
 .advantages-page__img-7 {
-    width: 110px; 
+    width: 110px;
     top: 150px;
     left: 175px;
     z-index: 19;
-    -webkit-animation: floatingСlockwise 20s  linear infinite;
-            animation: floatingСlockwise 20s  linear infinite;
+    -webkit-animation: floatingСlockwise 20s linear infinite;
+            animation: floatingСlockwise 20s linear infinite;
   }
 
 .advantages-page__img-8 {
-    width: 80px; 
+    width: 80px;
     bottom: 20px;
     left: 5px;
     z-index: 22;
-    -webkit-animation: scale 20s  linear infinite;
-            animation: scale 20s  linear infinite;
+    -webkit-animation: scale 20s linear infinite;
+            animation: scale 20s linear infinite;
   }
 
 .modal {
@@ -887,14 +886,18 @@ body {
   transition: 0.3s all;
 }
 
+.modal__title {
+    padding-left: 120px;
+  }
+
 .modal__open {
-    z-index: 0;
-    opacity: 0;
+    z-index: 15;
+    opacity: 100;
   }
 
 .modal__hidden {
-    z-index: 10;
-    opacity: 100;
+    z-index: 0;
+    opacity: 0;
   }
 
 .modal {
@@ -907,15 +910,15 @@ body {
     top: 16vh;
     right: 5vw;
     border-radius: 50px;
-    padding: 50px 50px 20px 0px;
+    padding: 200px 50px 20px 170px;
     width: 790px;
     height: 580px;
+    z-index: 11;
 
     background-color: rgb(255, 255, 255);
   }
 
 .modal__list {
-
   }
 
 .modal__close {
@@ -923,8 +926,8 @@ body {
     top: 30px;
     right: 30px;
     max-width: 40px;
+    z-index: 40;
   }
-
 
 /* ---TITLE----------------------------------------------- */
 .title {
@@ -932,11 +935,11 @@ body {
   text-transform: uppercase;
   line-height: 1.1;
   text-align: left;
-  z-index: 100;
+  z-index: 10;
   overflow-wrap: normal;
 }
-.title .bold {
-    padding: 0 30px;
+.title strong {
+    padding: 0 10px;
     font-family: 'GilroyExtraBold';
     font-weight: 800;
   }
@@ -975,19 +978,32 @@ body {
 
 /* ---SCROLL-BLOCK----------------------------------------------- */
 .scrollable-block {
+  --width: 775px;
+  --height: 445px;
+
   position: relative;
 
-  width: 775px;
-  height: 445px;
+  width: var(--width);
+  height: var(--height);
   overflow-y: auto;
   padding: 25px 25px 25px 100px;
   direction: rtl;
+  font-family: 'DINPro';
+  font-size: 22px;
 }
 .scrollable-block p {
     direction: ltr;
   }
+.scrollable-block__bg {
+    position: absolute;
+    width: var(--width);
+    height: var(--height);
+    border-radius: 50px;
+    background-color: white;
+  }
 .scrollable-block::-webkit-scrollbar {
     width: 20px;
+    margin-right: 100px;
   }
 .scrollable-block::-webkit-scrollbar-track {
     position: absolute;
@@ -1024,6 +1040,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 40;
 }
 .button__icon-border {
     display: inline-block;
@@ -1076,7 +1093,33 @@ body {
     font-size: 27px;
   }
 
-///////////////////////////////////////////////////////////////////
+.pagination__controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+
+.pagination__control-link {
+    max-height: 15px;
+  }
+
+.pagination__page-link {
+    z-index: 100;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    border: 2px solid var(--primatyColor);
+  }
+
+.pagination__page-link--active {
+      background-color: var(--primatyColor);
+    }
 
 .logo {
   position: absolute;
@@ -1088,3 +1131,14 @@ body {
 .floating-element {
   position: absolute;
 }
+
+.list-item__marker {
+    font-family: 'GilroyExtraBold';
+    font-size: 25px;
+    color: var(--secondaryColor);
+  }
+
+.list-item__text {
+    font-family: 'DINPro';
+    font-size: 25px;
+  }

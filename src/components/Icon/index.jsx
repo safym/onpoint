@@ -6,6 +6,9 @@ import plus from '../../assets/images/plus.png'
 import meal from '../../assets/images/iconMeal.png'
 import regimen from '../../assets/images/iconRegimen.png'
 import close from '../../assets/images/close.png'
+import prev from '../../assets/images/prev.png'
+import next from '../../assets/images/next.png'
+
 
 const iconMap = {
   arrow: arrow,
@@ -14,7 +17,9 @@ const iconMap = {
   plus: plus,
   meal: meal, 
   regimen: regimen,
-  close: close
+  close: close,
+  prev: prev,
+  next: next,
 }
 
 const Icon = ({ iconName, className }) => {

@@ -8,7 +8,7 @@ const Modal = ({ children, className, modalIsOpen, toggleModal }) => {
       }`}
     >
       <div className="modal__wrapper">
-        <button className="modal__close" onClick={() => toggleModal()}>
+        <button className="modal__close" onClick={toggleModal}>
           <Icon iconName="close" />
         </button>
         {children}
