@@ -2,13 +2,10 @@
 
 <p align="center">
   <a href="https://img.shields.io">
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=HTML5&color=E34F26&logo=HTML5&logoColor=FFFFFF&label=" />
+    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=React&color=222222&logo=React&logoColor=61DAFB&label=" />
   </a>
   <a href="https://img.shields.io">
     <img src="https://img.shields.io/static/v1?style=for-the-badge&message=PostCSS&color=DD3A0A&logo=PostCSS&logoColor=FFFFFF&label=" />
-  </a>
-  <a href="https://img.shields.io">
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=React&color=222222&logo=React&logoColor=61DAFB&label=" />
   </a>
 </p>
 
