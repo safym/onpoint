@@ -1,6 +1,6 @@
 import React from 'react'
 
-import pinksperm from '../../assets/images/pinksperm.png'
+import pinksperm from '../../assets/images/pinkSperm.png'
 
 const imageMap = {
   pinksperm: pinksperm,
