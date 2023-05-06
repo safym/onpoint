@@ -1022,66 +1022,120 @@ body {
 
 /* ---SCROLL-BLOCK----------------------------------------------- */
 .scrollable-block {
-  width: 775px;
-  height: 445px;
-  padding: 25px 25px 25px 100px;
   position: relative;
-  overflow-y: scroll;
-  direction: rtl;
   font-family: 'DINPro';
   font-size: 22px;
   z-index: 10;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-.scrollable-block p {
-    direction: ltr;
+.scrollable-block__container {
+    height: 445px;
   }
-.scrollable-block__bg,
-  .scrollable-block__overflow-shadow {
-    position: absolute;
-    top: 80px;
-    right: 130px;
-    width: 770px;
-    height: 455px;
-    border-radius: 50px;
-  }
-.scrollable-block__bg {
-    background-color: var(--bgColor);
-    z-index: 9;
+.scrollable-block__container::-webkit-scrollbar {
+      display: none;
+    }
+.scrollable-block__content-wrapper {
+    position: relative;
+    width: 775px;
+    height: 100%;
+    margin-left: 50px;
+
+    border-radius: 40px;
+    background: var(--bgColor);
     -webkit-box-shadow: var(--blockShadow);
             box-shadow: var(--blockShadow);
+    overflow: hidden;
   }
-.scrollable-block__overflow-shadow {
-    z-index: 11;
-    -webkit-box-shadow: inset var(--bgColor) 0 -20px 10px,
-      inset var(--bgColor) 0 20px 10px;
-            box-shadow: inset var(--bgColor) 0 -20px 10px,
-      inset var(--bgColor) 0 20px 10px;
-  }
-.scrollable-block::-webkit-scrollbar {
-    width: 20px;
-    margin-right: 100px;
-  }
-.scrollable-block::-webkit-scrollbar-track {
+.scrollable-block__content-wrapper::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: -webkit-gradient(
+        linear,
+        left bottom, left top,
+        from(rgba(255, 255, 255, 1)),
+        color-stop(5%, rgba(255, 255, 255, 1)),
+        color-stop(10%, rgba(255, 255, 255, 0)),
+        color-stop(90%, rgba(255, 255, 255, 0)),
+        color-stop(99%, rgba(255, 255, 255, 1)),
+        color-stop(101%, rgba(255, 255, 255, 1))
+      );
+      background: -o-linear-gradient(
+        bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 5%,
+        rgba(255, 255, 255, 0) 10%,
+        rgba(255, 255, 255, 0) 90%,
+        rgba(255, 255, 255, 1) 99%,
+        rgba(255, 255, 255, 1) 101%
+      );
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 5%,
+        rgba(255, 255, 255, 0) 10%,
+        rgba(255, 255, 255, 0) 90%,
+        rgba(255, 255, 255, 1) 99%,
+        rgba(255, 255, 255, 1) 101%
+      );
+    }
+.scrollable-block__content {
     position: absolute;
-    background-color: var(--textColor);
-    border-radius: 20px;
-    border: 7px solid transparent;
-    background-clip: content-box;
-    width: 20px;
+    top: 0;
+
+    width: 100%;
+    padding: 25px 40px;
+
+    color: var(--textColor);
+    line-height: 1.7;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
-.scrollable-block::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background-color: var(--primatyColor);
-    -webkit-box-shadow: 5px 5px 5px 0px var(--primatyColorDark) inset,
-      -5px -5px 5px 0px var(--primatyColorLight) inset;
-            box-shadow: 5px 5px 5px 0px var(--primatyColorDark) inset,
-      -5px -5px 5px 0px var(--primatyColorLight) inset;
+.scrollable-block__thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 20px;
+
+    border-radius: 10px;
+    background-color: var(--primaryColor);
+    -webkit-box-shadow: 5px 5px 5px 0px var(--primaryColorDark) inset,
+      -5px -5px 5px 0px var(--primaryColorLight) inset;
+            box-shadow: 5px 5px 5px 0px var(--primaryColorDark) inset,
+      -5px -5px 5px 0px var(--primaryColorLight) inset;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+.scrollable-block__line {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 7px;
+    width: 5px;
+    height: 98%;
+    border-radius: 10px;
+    padding: 10px 0;
+    background-color: var(--textColor);
   }
 
 /* ---BUTTON----------------------------------------------- */
 .button {
   font-family: 'DINPro';
-  background-color: var(--primatyColor);
+  background-color: var(--primaryColor);
 
   border-radius: 80px;
   width: 287px;
@@ -1101,21 +1155,21 @@ body {
     background: -webkit-gradient(
       linear,
       left top, right bottom,
-      from(var(--primatyColorDark)),
-      color-stop(50%, var(--primatyColor)),
-      to(var(--primatyColorLight))
+      from(var(--primaryColorDark)),
+      color-stop(50%, var(--primaryColor)),
+      to(var(--primaryColorLight))
     );
     background: -o-linear-gradient(
       top left,
-      var(--primatyColorDark) 0%,
-      var(--primatyColor) 50%,
-      var(--primatyColorLight) 100%
+      var(--primaryColorDark) 0%,
+      var(--primaryColor) 50%,
+      var(--primaryColorLight) 100%
     );
     background: linear-gradient(
       to bottom right,
-      var(--primatyColorDark) 0%,
-      var(--primatyColor) 50%,
-      var(--primatyColorLight) 100%
+      var(--primaryColorDark) 0%,
+      var(--primaryColor) 50%,
+      var(--primaryColorLight) 100%
     );
     width: 60px;
     height: 60px;
@@ -1176,7 +1230,7 @@ body {
 .pagination__page-link--active {
       -webkit-box-shadow: var(--pinkBorder);
               box-shadow: var(--pinkBorder);
-      background-color: var(--primatyColor);
+      background-color: var(--primaryColor);
     }
 
 /* ---PAGINATION----------------------------------------------- */
