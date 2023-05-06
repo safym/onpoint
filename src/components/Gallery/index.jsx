@@ -9,15 +9,24 @@ import Icon from '../Icon'
 const TRANSLATE_RESET = 'translateX(0vw)'
 const PAGES_COUNT = 3
 
-const HorizontalContainer = () =>{
-  const [touchStart, setTouchStart] = React.useState(0)
-  const [touchEnd, setTouchEnd] = React.useState(0)
-  const [currentPage, setCurrentPage] = React.useState(0)
+const HorizontalContainer = () => {
+  // Scrollable container ref
   const scrollRef = useRef(null)
 
+  // Satart, end coords of mousemove/touchmove events
+  const [touchStart, setTouchStart] = React.useState(null)
+  const [touchEnd, setTouchEnd] = React.useState(null)
+
+  // Current page state
+  const [currentPage, setCurrentPage] = React.useState(0)
+
+  // Array of pages index (for PAGES_COUNT = 3: pageList = [0, 1, 2])
   const pagesList = Array.from(Array(PAGES_COUNT).keys())
 
+  // Handler of mousedown/touchstart events
   const handleSwipeStart = (e) => {
+    setTouchEnd(null)
+
     if (e.type === 'touchstart') {
       setTouchStart(e.targetTouches[0].clientX)
     } else if (e.type === 'mousedown') {
@@ -25,6 +34,7 @@ const HorizontalContainer = () =>{
     }
   }
 
+  // Handler of mousemove/touchmove events
   const handleSwipeMove = (e) => {
     if (e.type === 'touchmove') {
       setTouchEnd(e.targetTouches[0].clientX)
@@ -33,7 +43,10 @@ const HorizontalContainer = () =>{
     }
   }
 
+  // Handler of mouseup/touchend events
   const handleSwipeEnd = () => {
+    if (!touchEnd || !touchEnd) return
+
     if (touchStart - touchEnd > 100) {
       moveToPage(currentPage + 1)
     } else if (touchStart - touchEnd < -100) {
@@ -41,6 +54,7 @@ const HorizontalContainer = () =>{
     }
   }
 
+  // Handler of scroll event (by wheel)
   useEffect(() => {
     const container = scrollRef.current
     container.style.transform = TRANSLATE_RESET
@@ -72,6 +86,7 @@ const HorizontalContainer = () =>{
     }
   }, [scrollRef])
 
+  // Move to page function - apply translateX to container using page index
   const moveToPage = (pageNum) => {
     if (!pagesList.includes(pageNum)) return
 
