@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 
 import AdvantagesPage from '../../app/pages/AdvantagesPage'
 import MessagePage from '../../app/pages/MessagePage'
@@ -14,11 +14,11 @@ const HorizontalContainer = () => {
   const scrollRef = useRef(null)
 
   // Satart, end coords of mousemove/touchmove events
-  const [touchStart, setTouchStart] = React.useState(null)
-  const [touchEnd, setTouchEnd] = React.useState(null)
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
 
   // Current page state
-  const [currentPage, setCurrentPage] = React.useState(0)
+  const [currentPage, setCurrentPage] = useState(0)
 
   // Array of pages index (for PAGES_COUNT = 3: pageList = [0, 1, 2])
   const pagesList = Array.from(Array(PAGES_COUNT).keys())
@@ -54,6 +54,17 @@ const HorizontalContainer = () => {
     }
   }
 
+  // Move to page function - apply translateX to container using page index
+  const moveToPage = useCallback((pageNum) => {
+    if (!pagesList.includes(pageNum)) return
+
+    setCurrentPage(pageNum)
+
+    const container = scrollRef.current
+
+    container.style.transform = `translateX(${-100 * pageNum}vw)`
+  }, [])
+
   // Handler of scroll event (by wheel)
   useEffect(() => {
     const container = scrollRef.current
@@ -84,18 +95,7 @@ const HorizontalContainer = () => {
       container.addEventListener('wheel', onWheel)
       return () => container.removeEventListener('wheel', onWheel)
     }
-  }, [scrollRef])
-
-  // Move to page function - apply translateX to container using page index
-  const moveToPage = (pageNum) => {
-    if (!pagesList.includes(pageNum)) return
-
-    setCurrentPage(pageNum)
-
-    const container = scrollRef.current
-
-    container.style.transform = `translateX(${-100 * pageNum}vw)`
-  }
+  }, [moveToPage, scrollRef])
 
   return (
     <>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import classNames from 'classnames'
 
 import ListItem from '../ListItem'
 import Icon from '../Icon'
-import classNames from 'classnames'
 
 const PAGE_ITEMS = 3
 const START_PAGE = 1
