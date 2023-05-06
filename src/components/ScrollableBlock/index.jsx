@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react'
-// import "./CustomScrollbar.css";
 
 const CustomScrollbar = ({ children }) => {
   // Elements refs
