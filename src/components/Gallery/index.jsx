@@ -109,7 +109,7 @@ const HorizontalContainer = () => {
         onMouseDown={handleSwipeStart}
         onMouseMove={handleSwipeMove}
         onMouseUp={handleSwipeEnd}
-        style={{ transform: TRANSLATE_RESET }}
+        style={{ transform: TRANSLATE_RESET, width: `${PAGES_COUNT * 100}vw` }}
       >
         <TitlePage moveToPage={moveToPage} />
         <MessagePage />

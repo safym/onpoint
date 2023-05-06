@@ -15,7 +15,6 @@ body {
 
 #root {
   width: 100vw;
-  overflow-y: hidden;
   overflow: hidden;
 }
 
@@ -29,9 +28,6 @@ body {
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 300vw;
-  transform: translateX(0vw);
-  height: 100vh;
   transition-duration: 1s;
 }
 
@@ -72,7 +68,7 @@ body {
 
   &__content-wrapper {
     position: relative;
-    max-width: 1024px;
+    max-width: var(--containerWidth);
     max-height: 768px;
     margin: 0 auto;
   }
@@ -235,8 +231,8 @@ body {
     flex-direction: column;
     justify-content: center;
     padding-left: 120px;
-    max-width: 680px;
-    z-index: 16;
+    max-width: 660px;
+    z-index: 15;
   }
 
   &__meal {
@@ -329,7 +325,7 @@ body {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  background-color: #16273ead;
+  background-color: var(--bgShadowColor);
   transition: var(--transition);
 
   &__title {
@@ -361,7 +357,7 @@ body {
     }
 
     @media only screen and (min-device-width: 1025px) {
-      right: 20vw;
+      left: 30vw;
     }
   }
 
@@ -504,6 +500,7 @@ body {
     top: 5px;
     bottom: 5px;
     left: 7px;
+    z-index: 9;
     width: 5px;
     height: 98%;
     border-radius: 10px;
@@ -575,16 +572,16 @@ body {
     display: flex;
     align-items: center;
     column-gap: 15px;
-    margin: 20px 0;
+    margin: 40px 0;
   }
 
   &__control-link {
     max-height: 15px;
   }
   &__page-link {
-    z-index: 100;
     width: 10px;
     height: 10px;
+    z-index: 30;
     border-radius: 15px;
     box-shadow: var(--blackBorder);
 

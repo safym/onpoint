@@ -574,7 +574,6 @@ body {
 
 #root {
   width: 100vw;
-  overflow-y: hidden;
   overflow: hidden;
 }
 
@@ -593,11 +592,6 @@ body {
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 300vw;
-  -webkit-transform: translateX(0vw);
-      -ms-transform: translateX(0vw);
-          transform: translateX(0vw);
-  height: 100vh;
   -webkit-transition-duration: 1s;
        -o-transition-duration: 1s;
           transition-duration: 1s;
@@ -639,7 +633,7 @@ body {
 }
 .page__content-wrapper {
     position: relative;
-    max-width: 1024px;
+    max-width: var(--containerWidth);
     max-height: 768px;
     margin: 0 auto;
   }
@@ -819,8 +813,8 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     padding-left: 120px;
-    max-width: 680px;
-    z-index: 16;
+    max-width: 660px;
+    z-index: 15;
   }
 
 .advantages-page__meal {
@@ -920,7 +914,7 @@ body {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  background-color: #16273ead;
+  background-color: var(--bgShadowColor);
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
@@ -961,7 +955,7 @@ body {
 @media only screen and (min-device-width: 1025px) {
 
 .modal__wrapper {
-      right: 20vw
+      left: 30vw
   }
     }
 
@@ -1125,6 +1119,7 @@ body {
     top: 5px;
     bottom: 5px;
     left: 7px;
+    z-index: 9;
     width: 5px;
     height: 98%;
     border-radius: 10px;
@@ -1214,15 +1209,15 @@ body {
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
             column-gap: 15px;
-    margin: 20px 0;
+    margin: 40px 0;
   }
 .pagination__control-link {
     max-height: 15px;
   }
 .pagination__page-link {
-    z-index: 100;
     width: 10px;
     height: 10px;
+    z-index: 30;
     border-radius: 15px;
     -webkit-box-shadow: var(--blackBorder);
             box-shadow: var(--blackBorder);
