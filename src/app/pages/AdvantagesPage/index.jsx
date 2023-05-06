@@ -36,7 +36,7 @@ const MessagePage = () => {
         <PaginationContainer items={advantagesList} />
       </Modal>
 
-      <Page className={'advantages-page'}>
+      <Page className="advantages-page">
         <img className="advantages-page__image" src={bottle} alt="bottle" />
         <div className="advantages-page__content-wrapper">
           <div className="advantages-page__title">

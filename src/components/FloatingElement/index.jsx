@@ -1,3 +1,5 @@
+import classNames from 'classnames'
+
 import corpuscule1 from '../../assets/images/corpuscule1.png'
 import corpuscule2 from '../../assets/images/corpuscule2.png'
 import corpuscule3 from '../../assets/images/corpuscule3.png'
@@ -24,7 +26,7 @@ const imageMap = {
 
 const FloatingElement = ({ imageName, className }) => {
   const image = imageMap[imageName]
-  const elClassName = `floating-element ${className}`
+  const elClassName = classNames('floating-element', className)
 
   return (
     <div className={elClassName}>

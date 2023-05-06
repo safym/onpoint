@@ -7,7 +7,7 @@ import FloatingElement from '../../../components/FloatingElement'
 
 const TitlePage = ({ moveToPage }) => {
   return (
-    <Page className={'title-page'}>
+    <Page className="title-page">
       <Title size="small">привет,</Title>
       <Title size="large">
         это

@@ -1,7 +1,9 @@
+import classNames from 'classnames'
+
 import Icon from '../Icon'
 
 const Button = ({ onClick, icon, className, children }) => {
-  const elClassName = `button ${className}`
+  const elClassName = classNames('button', className)
 
   return (
     <button className={elClassName} onClick={onClick}>

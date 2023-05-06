@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 
 import pinksperm from '../../assets/images/pinkSperm.png'
 
@@ -8,7 +9,7 @@ const imageMap = {
 
 const AppearElement = ({ imageName, className }) => {
   const image = imageMap[imageName]
-  const elClassName = `appear-element ${className}`
+  const elClassName = classNames('appear-element', className)
 
   return (
     <div className={elClassName}>

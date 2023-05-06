@@ -7,7 +7,7 @@ import AppearElement from '../../../components/AppearElement'
 
 const MessagePage = () => {
   return (
-    <Page className={'message-page'}>
+    <Page className="message-page">
       <Title size="small">
         текст <br />
         сообщения

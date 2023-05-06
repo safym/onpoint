@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import ListItem from '../ListItem'
 import Icon from '../Icon'
+import classNames from 'classnames'
 
 const PAGE_ITEMS = 3
 const START_PAGE = 1
@@ -30,13 +31,15 @@ const PaginationContainer = ({ items, className }) => {
 
     const pagesLinks = []
     for (let i = 1; i <= totalPages; i++) {
+      const linkClassName = classNames('pagination__page-link', {
+        'pagination__page-link--active': page === i,
+      })
+
       pagesLinks.push(
         <button
           key={i}
           onClick={() => setPage(i)}
-          className={`pagination__page-link ${
-            page === i ? 'pagination__page-link--active' : ''
-          }`}
+          className={linkClassName}
         ></button>
       )
     }

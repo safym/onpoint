@@ -1,3 +1,5 @@
+import classNames from 'classnames'
+
 const Title = ({ size, children }) => {
   let classModify
 
@@ -15,7 +17,11 @@ const Title = ({ size, children }) => {
     classModify = ''
   }
 
-  return <h1 className={`title title--${classModify}`}>{children}</h1>
+  const elClassName = classNames('title', {
+    [`title--${classModify}`]: classModify,
+  })
+
+  return <h1 className={elClassName}>{children}</h1>
 }
 
 export default Title
