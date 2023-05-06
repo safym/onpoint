@@ -42,7 +42,7 @@ const PaginationContainer = ({ items, className }) => {
     }
 
     setpagesLinks([...pagesLinks])
-  }, [page])
+  }, [items, page, totalPages])
 
   const handlePageChange = (newPage) => {
     if (START_PAGE - 1 < newPage && newPage <= totalPages) {
