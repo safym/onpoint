@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 
-import Icon from '../Icon'
+import Icon from '../Icon/index.jsx'
 
 const Button = ({ onClick, icon, className, children }) => {
   const elClassName = classNames('button', className)

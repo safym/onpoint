@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import Icon from '../Icon'
+import Icon from '../Icon/index.jsx'
 
 const Card = ({ children, iconName, className }) => {
   const elClassName = classNames('card', className)

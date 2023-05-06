@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 
-import Icon from '../Icon'
+import Icon from '../Icon/index.jsx'
 
 const Modal = ({ children, className, modalIsOpen, toggleModal }) => {
   const elClassName = classNames('modal', className, {

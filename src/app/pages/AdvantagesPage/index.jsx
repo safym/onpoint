@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-import Page from '../../../components/Page'
-import Title from '../../../components/Title'
-import Button from '../../../components/Button'
-import Card from '../../../components/Card'
-import FloatingElement from '../../../components/FloatingElement'
+import Page from '../../../components/Page/index.jsx'
+import Title from '../../../components/Title/index.jsx'
+import Button from '../../../components/Button/index.jsx'
+import Card from '../../../components/Card/index.jsx'
+import FloatingElement from '../../../components/FloatingElement/index.jsx'
+import Modal from '../../../components/Modal/index.jsx'
+import PaginationContainer from '../../../components/PaginationContainer/index.jsx'
 
 import bottle from '../../../assets/images/bottle.png'
-import Modal from '../../../components/Modal'
-import PaginationContainer from '../../../components/PaginationContainer'
 
 const advantagesList = [
   'Lorem ipsum dolor sit amet, consectetur  adipiscing elit',

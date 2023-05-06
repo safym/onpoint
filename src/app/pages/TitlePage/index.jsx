@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Page from '../../../components/Page'
-import Title from '../../../components/Title'
-import Button from '../../../components/Button'
-import FloatingElement from '../../../components/FloatingElement'
+import Page from '../../../components/Page/index.jsx'
+import Title from '../../../components/Title/index.jsx'
+import Button from '../../../components/Button/index.jsx'
+import FloatingElement from '../../../components/FloatingElement/index.jsx'
 
 const TitlePage = ({ moveToPage }) => {
   return (

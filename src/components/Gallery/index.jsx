@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from 'react'
 
-import AdvantagesPage from '../../app/pages/AdvantagesPage'
-import MessagePage from '../../app/pages/MessagePage'
-import TitlePage from '../../app/pages/TitlePage'
-import Header from '../Header'
-import Icon from '../Icon'
+import AdvantagesPage from '../../app/pages/AdvantagesPage/index.jsx'
+import MessagePage from '../../app/pages/MessagePage/index.jsx'
+import TitlePage from '../../app/pages/TitlePage/index.jsx'
+import Header from '../Header/index.jsx'
+import Icon from '../Icon/index.jsx'
 
 const TRANSLATE_RESET = 'translateX(0vw)'
 const PAGES_COUNT = 3

@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 
-import Icon from '../Icon'
+import Icon from '../Icon/index.jsx'
 
 const Header = ({ moveToPage }) => {
   const linkClassName = classNames('header__navlink', 'navlink')

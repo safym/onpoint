@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Page from '../../../components/Page'
-import Title from '../../../components/Title'
-import ScrollableBlock from '../../../components/ScrollableBlock'
-import AppearElement from '../../../components/AppearElement'
+import Page from '../../../components/Page/index.jsx'
+import Title from '../../../components/Title/index.jsx'
+import ScrollableBlock from '../../../components/ScrollableBlock/index.jsx'
+import AppearElement from '../../../components/AppearElement/index.jsx'
 
 const MessagePage = () => {
   return (
