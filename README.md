@@ -26,7 +26,7 @@
 </div>
 <div align="center">
     <img height="300px" src="https://user-images.githubusercontent.com/99616798/233811252-4f7a0c0d-1b3a-4087-81bc-3898e2a3f7ab.png" />
-    <img height="300px" src="https://user-images.githubusercontent.com/99616798/233811254-362653a6-88bf-44b2-9b49-b8cb2ae965ed.png" />
+    <img height="300px" src="https://user-images.githubusercontent.com/99616798/236651367-d30c7a05-7ed0-423e-9376-229e7d530810.png" />
 </div>
 
 ## 📑 Требования:
